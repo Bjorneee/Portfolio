@@ -1,9 +1,5 @@
 # Cool things I want to add
 
-- Fun Mode
+Fun Mode: Adds various fun elements across the site:
 
-Adds various fun elements across the site
-
-Some ideas:
-    * Little characters doing things in the background
-    * 
+- Little characters doing things in the background
