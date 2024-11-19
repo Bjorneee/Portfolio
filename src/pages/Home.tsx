@@ -1,12 +1,11 @@
 import { projectList } from '../assets/lists';
 
-import HorizontalCardScroll from '../components/HorizontalCardScroll';
+import CardCarousel from '../components/CardCarousel';
 
 function Home() {
     return(
         <>
-            <h1>Home</h1>
-            <HorizontalCardScroll cards={projectList}/>
+            <CardCarousel cards={projectList}/>
         </>
     );
 }

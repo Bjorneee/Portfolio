@@ -39,6 +39,33 @@
   }
 }
 
+nav {
+  
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  height: 10vh;
+
+}
+
+nav div {
+
+  cursor: pointer;
+
+  text-align: center;
+
+  width: 10vw;
+
+}
+
 body {
 
   margin: 0;
@@ -61,12 +88,12 @@ body {
   transition-duration: var(--duration);
   border-radius: 1%;
 
-  padding:1%;
+  padding: 1%;
   margin: 10px;
   margin-left: 400px;
   margin-right: 400px;
 
-  min-width: 600px;
+  min-width: fit-content;
   max-width: 60vw;
   min-height: 100vh;
 
@@ -81,6 +108,12 @@ header {
 
   font-size: 3vw;
   font-weight: 700;
+
+}
+
+h1 {
+
+  font-size: 1.25vw;
 
 }
 

@@ -35,7 +35,7 @@ interface Props {
     cards: card[];
 }
 
-function HorizontalCardScroll({cards}: Props) {
+function CardCarousel({cards}: Props) {
 
     const [[currentCard, direction], setCurrentCard] = useState([0, 0]);
     const [inputLock, setInputLock] = useState(false);
@@ -53,7 +53,7 @@ function HorizontalCardScroll({cards}: Props) {
 
     useEffect(() => {
         const timeout = setTimeout(() => {
-            setCurrentCard([(currentCard + 1) % cards.length, 1]);
+            changeCard(1);
         }, 10000);
 
         return () => clearTimeout(timeout);    
@@ -108,4 +108,4 @@ function HorizontalCardScroll({cards}: Props) {
     );
 }
 
-export default HorizontalCardScroll;
+export default CardCarousel;
