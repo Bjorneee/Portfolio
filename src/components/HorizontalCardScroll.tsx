@@ -1,7 +1,7 @@
 import '../styles/home.css'
 
 import { card } from '../types';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -50,6 +50,14 @@ function HorizontalCardScroll({cards}: Props) {
         }, 800)
 
     }
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setCurrentCard([(currentCard + 1) % cards.length, 1]);
+        }, 10000);
+
+        return () => clearTimeout(timeout);    
+    }, [currentCard])
 
     return(
         <div className='project-slides'>
