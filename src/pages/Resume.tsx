@@ -1,7 +1,5 @@
 
 
-function Resume() {
+export default function Resume() {
     return;
 }
-
-export default Resume;

@@ -35,7 +35,7 @@ interface Props {
     cards: card[];
 }
 
-function CardCarousel({cards}: Props) {
+export default function CardCarousel({cards}: Props) {
 
     const [[currentCard, direction], setCurrentCard] = useState([0, 0]);
     const [inputLock, setInputLock] = useState(false);
@@ -107,5 +107,3 @@ function CardCarousel({cards}: Props) {
         </div>
     );
 }
-
-export default CardCarousel;
