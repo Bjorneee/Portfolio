@@ -47,7 +47,7 @@ export default function NavBar({changePage}: Props) {
                     onClick={() => handleTabSelect(index)}
                     className={activeTab === index ? 'active' : ''}
                 >
-                    {tab}
+                    <h1>{tab}</h1>
                 </button>
             ))}
         </nav>

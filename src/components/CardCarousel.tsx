@@ -85,7 +85,7 @@ export default function CardCarousel({cards}: Props) {
                     >
 
                         <div className='card-text'>
-                            <h1>{cards[currentCard].name}</h1>
+                            <h2>{cards[currentCard].name}</h2>
                         </div>
                         {cards[currentCard].src &&
                             <img 
