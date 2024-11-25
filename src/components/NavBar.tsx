@@ -1,7 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 
 
-export default function NavBar() {
+interface Props {
+    changePage: (index: number) => void;
+}
+
+export default function NavBar({changePage}: Props) {
 
     const tabs = ['Home', 'About', 'Resume'];
 
@@ -24,7 +28,8 @@ export default function NavBar() {
 
     const handleTabSelect = (idx: number) => {
         setActiveTab(idx);
-        console.log(activeTab);
+        changePage(idx);
+        // console.log('Tab: ' + activeTab);
     }
 
     return (
