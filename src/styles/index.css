@@ -12,16 +12,11 @@
 
 :root {
 
-  --accent: #42fa70;
-  --body-bg: #242424;
-
   font-family: 'Nunito', Arial, Helvetica, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background: radial-gradient(circle at 50%, #202020, transparent);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -29,15 +24,28 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+
+    --accent: #42fa70;
+    --body-bg: #242424;
+
+    color: rgba(255, 255, 255, 0.87);
+    background: radial-gradient(circle at 50%, #202020, transparent);
+  }
+}
+
+
 @media (prefers-color-scheme: light) {
   :root {
+
+    --accent: #1ec046;
+    --body-bg: white;
+
     color: #213547;
-    background: white;
+    background: radial-gradient(circle at 50%, rgb(224, 224, 224), transparent);
   }
 
-  body {
-    background-color: gray;
-  }
 }
 
 body {
@@ -115,7 +123,9 @@ nav button {
 
   cursor: pointer;
 
-  color: white;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
 
   text-align: center;
 
